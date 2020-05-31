@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="3dip"
+    android:paddingLeft="3dip"
+    android:paddingRight="1dip"
+    android:paddingTop="9dip" >
+
+    <LinearLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp" >
+
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_world" />
+
+                <EditText
+                    android:id="@+id/ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search any IP address/domain"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/lookup"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="LOOK UP" />
+
+                <TextView
+                    android:id="@+id/json"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="3mm" />
+
+                <ImageView
+                    android:id="@+id/map"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="3mm" />
+
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/about_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello"
+                    android:textSize="1.5mm" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:measureWithLargestChild="true"
+            android:orientation="horizontal"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:paddingTop="4dip" >
+
+            <LinearLayout
+                android:id="@+id/leftSpacer"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:maxLines="2" />
+
+            <Button
+                android:id="@+id/button3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:maxLines="2" />
+
+            <Button
+                android:id="@+id/button2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:maxLines="2" />
+
+            <LinearLayout
+                android:id="@+id/rightSpacer"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
